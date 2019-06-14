@@ -80,9 +80,7 @@ class ReadDataReg extends Command
                         ]];
                  });
     }
-    public function getSummaryByCardType($string){
-        preg_match_all('/.*\b(MASTERCARD|VISA|DISCOVER|DEBIT)\b.*(SALE).*/',$string,$match);
-    }
+
     protected function getDataTable($tableName,$rowPattern,$headerPattern,$dataString) {
         preg_match_all($rowPattern,$dataString,$rows);
         if(is_array($headerPattern)) {
